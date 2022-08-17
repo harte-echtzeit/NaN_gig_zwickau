@@ -1,0 +1,37 @@
+let pat = "{[c4 a4] h4}. { c4}"
+    -- some ideas for notes
+    -- -> c c h a
+    -- -> c c c cs
+    -- -> c c c h
+    -- -> a a a h
+    -- -> a a a af
+    -- -> a a h c
+    -- -> 1 1 1 2
+    -- -> 1 1 2 3
+    -- pat = "[c4 c4] h4 ~ a4"
+    pat' = -pat 
+
+d1 $ jux rev $ fast 2
+  $ almostAlways (superimpose $ (rot 3). (# djf rand) . (chop 2))
+  $ n pat' 
+  # s "<808lc clubkick> bd"
+  -- # s "<superhoover supertron supermandolin>"
+  -- # vowel "a?u"
+  # gain "<1.2 1.4 1.6 1.4 1.2>"
+  -- # legato 8
+
+-- lets find out how to make a pad or a drone?? with sheep sounds :-D
+d3 $ slow 3 $ chop 1 $  n "3*2"
+  # s "baa"
+  -- # squiz 1
+  # delaytime 0.4 # delay 1
+  # lpf 400
+  # gain (sine+0.3)
+
+-- slightly hypnotic half-broken beat (REALLY NICE!)
+d5 $ every 2 (# pan sine) $ n "[2|5]!4"
+  # s "tabla(5,8) [dr2!3, bd ~, ~ sn]"
+  # legato "2 [2|4|3]"
+  # waveloss "0 63 [32|42]"
+  # speed "1 [1.3, 2, 1.2, -1, 3]"
+  # gain 0.8

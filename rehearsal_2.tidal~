@@ -1,0 +1,21 @@
+let pat = "{[c4 a4] h4}. { c4}"
+    -- some ideas for notes
+    -- -> c c h a
+    -- -> c c c cs
+    -- -> c c c h
+    -- -> a a a h
+    -- -> a a a af
+    -- -> a a h c
+    -- -> 1 1 1 2
+    -- -> 1 1 2 3
+    -- pat = "[c4 c4] h4 ~ a4"
+    pat' = -pat 
+
+d1 $ jux rev $ fast 2
+  $ almostAlways (superimpose $ (rot 3). (# djf rand) . (chop 2))
+  $ n pat' 
+  # s "<808lc clubkick> bd"
+  -- # s "<superhoover supertron supermandolin>"
+  -- # vowel "a?u"
+  # gain "<1.2 1.4 1.6 1.4 1.2>"
+  -- # legato 8
