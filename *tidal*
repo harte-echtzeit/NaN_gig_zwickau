@@ -1,0 +1,88 @@
+GHCi, version 9.0.2: https://www.haskell.org/ghc/  :? for help
+ghci> [TidalCycles version 1.8.1]
+Installed in /usr/share/haskell-tidal
+Listening for external controls on 127.0.0.1:6010
+Connected to SuperDirt.
+tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> 
+<interactive>:840:3: error:
+    Variable not in scope: (--#) :: IO () -> ControlPattern -> t
+tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> 
+<interactive>:951:19: error:
+    • Couldn't match expected type: IO () -> Pattern ValueMap
+                  with actual type: Pattern ValueMap
+    • The function ‘s’ is applied to two value arguments,
+        but its type ‘Pattern String -> Pattern ValueMap’ has only one
+      In the second argument of ‘(<|)’, namely
+        ‘s "[bottle [bottle*3] bottle!2]" hush’
+      In the second argument of ‘($)’, namely
+        ‘n "1..6" <| s "[bottle [bottle*3] bottle!2]" hush’
+tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> 
+<interactive>:1254:3: error: parse error on input ‘|<|’
+tidal> 
+<interactive>:1256:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                                    -> Pattern ValueMap
+                  with actual type: Pattern ValueMap
+    • The first argument of ($) takes one value argument,
+        but its type ‘Pattern ValueMap’ has none
+      In the second argument of ‘($)’, namely
+        ‘sound "bass" $ fast 2 |<| n "1 2 5 4" # gain 1.4’
+      In the second argument of ‘($)’, namely
+        ‘struct ("t(3,5) f t*2 f ~")
+           $ sound "bass" $ fast 2 |<| n "1 2 5 4" # gain 1.4’
+
+<interactive>:1257:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                  with actual type: Pattern a0 -> Pattern a0
+    • Probable cause: ‘fast’ is applied to too few arguments
+      In the first argument of ‘(|<|)’, namely ‘fast 2’
+      In the first argument of ‘(#)’, namely ‘fast 2 |<| n "1 2 5 4"’
+      In the second argument of ‘($)’, namely
+        ‘fast 2 |<| n "1 2 5 4" # gain 1.4’
+tidal> 
+<interactive>:1267:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                                    -> Pattern ValueMap
+                  with actual type: Pattern ValueMap
+    • The first argument of ($) takes one value argument,
+        but its type ‘Pattern ValueMap’ has none
+      In the second argument of ‘($)’, namely
+        ‘sound "bass" $ fast 2 |<| n "1 2 5 4" # gain 1.4’
+      In the second argument of ‘($)’, namely
+        ‘struct ("t(3,5) f t*2 f ~")
+           $ sound "bass" $ fast 2 |<| n "1 2 5 4" # gain 1.4’
+
+<interactive>:1268:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                  with actual type: Pattern a0 -> Pattern a0
+    • Probable cause: ‘fast’ is applied to too few arguments
+      In the first argument of ‘(|<|)’, namely ‘fast 2’
+      In the first argument of ‘(#)’, namely ‘fast 2 |<| n "1 2 5 4"’
+      In the second argument of ‘($)’, namely
+        ‘fast 2 |<| n "1 2 5 4" # gain 1.4’
+tidal> 
+<interactive>:1280:3: error: parse error on input ‘|<|’
+tidal> 
+<interactive>:1283:3: error: parse error on input ‘<|’
+tidal> 
+<interactive>:1284:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                                    -> Pattern ValueMap
+                  with actual type: Pattern ValueMap
+    • The first argument of ($) takes one value argument,
+        but its type ‘Pattern ValueMap’ has none
+      In the second argument of ‘($)’, namely
+        ‘sound "bass" $ fast 2 # n "1 2 5 4" # gain 1.4’
+      In the second argument of ‘($)’, namely
+        ‘struct ("t(3,5) f t*2 f ~")
+           $ sound "bass" $ fast 2 # n "1 2 5 4" # gain 1.4’
+
+<interactive>:1285:3: error:
+    • Couldn't match expected type: Pattern ValueMap
+                  with actual type: Pattern a0 -> Pattern a0
+    • Probable cause: ‘fast’ is applied to too few arguments
+      In the first argument of ‘(#)’, namely ‘fast 2’
+      In the first argument of ‘(#)’, namely ‘fast 2 # n "1 2 5 4"’
+      In the second argument of ‘($)’, namely
+        ‘fast 2 # n "1 2 5 4" # gain 1.4’
+tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> tidal> 

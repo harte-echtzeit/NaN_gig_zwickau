@@ -8,7 +8,7 @@ d1 $ fast 3 $ sometimes (stut 5 0.5 0.1) $ n "1 2 5 23  ~ 45 " # s "bd 808hc bli
 d1 $ almostNever ((# djf rand) . (ghost))
   $ fast 2 $ stut 5 0.3 0.1
   $ s "<clubkick bd> blip"
-  # n "1 3 5"
+  #  n "1 3 5"
   # speed "0.5 1.2 1.5"
   # gain 0.9
   -- # djf rand
@@ -23,6 +23,7 @@ d2 $ sometimes(superimpose (hurry 2)) $ fast 2 $ n "5 ~ 2 4"
  # gain 0.99
  # waveloss "50..80"
 
+
 d3 $ hurry 1 $ every 3 (# crush 3) $ sometimes (jux (rev))
   $ s "[bass(9,16)]/2"
   # speed 0.8
@@ -36,6 +37,7 @@ d4 $ rot "<1 3 5 7>" $ s "{[dr:2 dr:2 dr:2 ~] dr2:8, dr2:6, [dr2:8 dr2:8 dr2:6 d
   # gain 1.9
 
 d12 $ n "1..6" <| s "[bottle [bottle*3] bottle!2]" 
+
 
 -- ACAB
 d5 $ fast 1 $ n "0 2 0 1 ~" # s "alphabet"
@@ -58,13 +60,13 @@ d7 $ fast 4 $ n "2 3 ~ 9 <[4|~|5] 1>" # s "jazz"
   # speed "2.6"
   # gain 1.2
   # djf 0.5
-  # vowel "u i u"
+  <| vowel "o i o"
 
 -- nice little theme
 d8 $ fast 2 $ s "invaders:4(2,15)"
    # crush 4
    # speed 0.7
-   # gain 0.8
+   # gain 0.7
 
 
 -- crazy synth line
@@ -76,17 +78,19 @@ d4 $ n (arp "[up|converge|disconverge]" "a'min c'maj") # s "superhoover"
 -- NEXT 3 togteher
 
 -- dark perc motif
-d5 $ every 2 (# krush rand) $ fast 0.6 $ s "[clubkick(9,16), sn(7,16,2)]"
+d5 $ every 2 (# krush rand) $ fast 0.6 $ s "[clubkick(9,16), sn(9,16,2)]"
   # room "0.2 0.4 0.6 0.4" # sz "0.4 0.6 0.8"
   # hpf "600 200 500"
   -- # vowel (choose ["o","a","u","i"])
   # gain 0.8
 
 -- basis for some tweaking?!
-d6 $ struct ("1(3,5) f t*2 f")
-  $ sound "bass"
+d6 $ struct ("t(3,5) f t*2 f ~") $
+  fast 2 $
+  sound "bass"
+  # n "1 2 5 4"
   # gain 1.4
-  # cutoff 700
+  -- # cutoff 700
 
 
 -- faint but nice beat
@@ -103,7 +107,7 @@ hush
 
 -------------------------------------------------
 
--- strange beat
+ -- strange beat
 -- some sort of beat
 d2 $ sometimes (stut 6 0.8 0.4) $ every 2 ((# fshift 100) . (# delay 0.8))
   $ s "[bd(3,9), popkick(5,9)] odx*2 . perc"
