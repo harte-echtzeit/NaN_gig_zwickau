@@ -6,67 +6,95 @@
 ---open somehow strange here
 
 
-d9 $ every 2 (# vowel "[a|u|i]") $
-  s "Z/2"
-  -- # gain 1.0
-  -- # pan sine
-  -- # room 0.4 # sz 0.9
-  -- # krush 8
-  -- # speed "0.3"
+d9 $
+  -- loopAt 4 $
+  --chop 45 $
+  -- zoom (0.0, 0.25) $
+  fast 1 $
+  s "ERZ/1"
+  -- # smear 0.2
+  -- # comb 0.6
+  -- # xsdelay 0.2
+  -- # ring 5 # ringf 200 # ringdf 230 
+  # fshift "-200"
+  # gain 0.9
+  -- # room 0.2 #sz 0.6
+  # speed "1.0"
 
 
+-- Kunstfreiheit
+d8 $ fast 1 $ n "0 2 0 1 ~" # s "alphabet"
+  # vowel"a"
+  -- # distort 0.1
+  -- # delaytime 0.2 # delay 1
+  # smear 0.2
+  -- # comb 0.6
+  -- # xsdelay 0.2
+  -- # ring 3 # ringf 200 # ringdf 230 
+ #  fshift "200"
+  # gain 0.6
 
+p "glitch" $
+  -- loopAt 4 $
+  --chop 45 $
+  -- zoom (0.0, 0.25) $
+  fast 1 $
+  s "ERZ/2"
+  # smear 0.3
+  -- # comb 0.6
+  -- # xsdelay 0.2
+  -- # ring 3 # ringf 200 # ringdf 230 
+  # fshift "-200"
+  -- # gain 1.1
+  # room 0.2
+  # speed "1.2"
+  # gain 0.2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+hush
 
 
 
 -- slightly hypnotic half-broken beat (REALLY NICE!)
-d1 $ every 2 (# pan sine) $
+d1 $ every 3 (# pan tri) $
+  ghost $
+  stut 6 0.5 0.2 $
   n "[2|5]!4"
   # s "tabla(5,8) [dr2!3, bd ~, ~ sn]"
   -- # legato "2 [2|4|3]"
-  -- # waveloss "0 63 [32|42]"
-  # speed "1 [1.3, 2, 1.2, -1, 3]"
-  # gain 1.0
+  # waveloss "0 63 [32|42]"
+  # speed "1 [1.3, 1.8, 1.2, -1, 3]"
+  # gain 0.9
+  -- # smear 0.3
+  -- # comb 0.6
+  -- # xsdelay 0.2
+  -- # ring 3 # ringf 200 # ringdf 230 
+  # fshift "50"
+  # lpf 600
+
 
 
 d2 $ hurry 1 $
   -- every 3 (# crush 3) $
-  -- sometimes (jux (rev)) $
+  sometimes (jux (rev)) $
   s "[bass(9,16)]/2"
-  # speed 0.8
-  # gain "<1.0 1.2 1.4 1.2 1.0>"
-  -- # vowel "[u|a|i]"
+  # speed 0.7
+  # gain "<0.8 1.0 1.2 0.8 1.0>"
+  # vowel "[u|a|i]"
 
 
 -- faint but nice beat
-d3 $ every 2 (jux rev . (# room 0.3) . (# gain 0.7)) $
-  -- s "jazz(6,9) bass:4"
-  s "jazz(6,9)"
+d3 $ every 3 (jux rev . (# room 0.4) . (# gain 0.6)) $
+  s "jazz(7,9) bass:4"
+  -- s "jazz(7,9)"
   -- s "superfm ~"
   # n (choose [1..7])
-  <| n (arp "updown" "c5'maj d4'min")
+  <| n (arp "updown" "c6'maj d5'min")
   # pan rand
-  # speed 1.8
-  # vowel "i [u|o] i"
+  # speed 1.5
+  # vowel "a [u|o] a"
   -- # djf rand
-  # gain 1.2
-  -- # smear 3
+  # gain 0.4
+  # smear 4
   -- # ring 3
 
 
@@ -76,7 +104,7 @@ d3 $ every 2 (jux rev . (# room 0.3) . (# gain 0.7)) $
  # speed 1.9
  -- # accelerate (slow 3 $ range (-1) 1 tri2) 
  -- # vowel "i u a o"
- # gain 0.99
+ # gain 0.4
  # waveloss "50..80"
 
 
@@ -103,7 +131,7 @@ d6 $ sometimes (stut 6 0.8 0.4) $ every 2 ((# fshift 100) . (# delay 0.8))
   # vowel "a"
   # shape (choose [0.4..0.85])
   # djf rand
-  # gain 0.99
+  # gain 0.6
   -- # lpf (slow 4 $ range 200 600 $ sine) 
 
 
@@ -112,40 +140,29 @@ hush
   
 -- SPEeCH SAMPLES
 
--- Kunstfreiheit
-d8 $ fast 1 $ n "0 2 0 1 ~" # s "alphabet"
-  -- # vowel "a"
-  -- # distort 0.1
-  -- # delaytime 0.2 # delay 1
-  -- # gain 0.7
 
 --- FCK AFD!
 d9 $ fast 0.62 $ n "[5 2 10 ~] . [0 5 3 ~]" # s "alphabet"
   # speed 0.8
   # crush 4
-  # gain 0.8
+  # gain 0.9
 
 hush
 
 
 -- glitchcore brüder starts here
-p "glitch" $
-  -- loopAt 4 $
-  --chop 45 $
-  -- zoom (0.0, 0.25) $
-  fast 1 $
-  s "ERZ/1"
-  -- # smear 0.2
-  -- # comb 0.6
-  -- # xsdelay 0.2
-  -- # ring 3 # ringf 200 # ringdf 230 
-  -- # fshift "-200"
-  -- # gain 1.1
-  -- # room 0.2
-  -- # speed "1.0"
 
 hush
 
 p "glitch" silence
 
   p "demo" $ s "[bd sn _ bd]"
+
+
+d9 $ every 2 (# vowel "[a|u|i]") $
+  s "Z/2"
+  -- # gain 1.0
+  -- # pan sine
+  -- # room 0.4 # sz 0.9
+  -- # krush 8
+  -- # speed "0.3"
